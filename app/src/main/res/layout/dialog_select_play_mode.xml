@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_dialog_bg"
+        android:padding="14dp">
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="请选择播放模式"
+            android:textColor="@color/color_ffffff"/>
+
+        <RadioGroup
+            android:id="@+id/mRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_below="@+id/titleTv">
+
+            <RadioButton
+                android:id="@+id/towRb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="同时播放两个"
+                android:textColor="@color/color_ffffff"
+                android:background="@null"
+                android:textSize="12dp"/>
+
+            <RadioButton
+                android:id="@+id/fourRb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="同时播放四个"
+                android:layout_marginTop="7dp"
+                android:checked="true"
+                android:textColor="@color/color_ffffff"
+                android:textSize="12dp"/>
+        </RadioGroup>
+
+    </RelativeLayout>
+
+</LinearLayout>

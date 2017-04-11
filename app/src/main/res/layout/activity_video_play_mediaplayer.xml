@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/activity_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.ywkd.admin.videoplayproject.activity.VideoPlayByMPActivity">
+
+    <SurfaceView
+        android:id="@+id/videoPlay_surfaceview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/padInforLl"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:background="#60000000"
+        android:orientation="vertical"
+        android:paddingBottom="14dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="14dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/videoTitleTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="正在播放："
+            android:textColor="#fff"
+            android:textSize="11dp"/>
+
+        <TextView
+            android:id="@+id/imeiTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:textColor="#fff"
+            android:textSize="11dp"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/waitingLl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="14dp">
+
+            <ProgressBar
+                style="?android:attr/progressBarStyle"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:visibility="visible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Loading..."
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="12dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/locationTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:textColor="#fff"
+            android:textSize="11dp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/qrCodeIv"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/tow"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/controlLl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#60000000"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/preBtn"
+            android:layout_width="26dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/music_pre_ic"/>
+
+        <Button
+            android:id="@+id/stopOrStartBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/music_puase_ic"/>
+
+        <Button
+            android:id="@+id/nextBtn"
+            android:layout_width="26dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/music_next_ic"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
